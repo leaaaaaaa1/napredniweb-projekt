@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.forma {
+    width: 400px;
+    background-color: #0906cdb8;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 0px 35px 50px;
+}
+
+.forma * {
+    z-index: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+}
+
+.field {
+    margin-top: 30px;
+}
+
+.label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.input {
+    display: block;
+    height: 25px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.input::placeholder {
+    color: #e5e5e5;
+}
+
+.submitBtn {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #3330b8b8;
+}
+
+.link {
+    padding-top: 25px;
+    text-align: center;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.errorMessage {
+    text-align: center; 
+    color: red; 
+    margin: 10px -20px; 
+    font-weight: bold; 
+}

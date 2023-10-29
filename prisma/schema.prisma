@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int           @id @default(autoincrement())
+  auth0Id       String        @unique
+  email         String        @unique
+  name          String?
+  competitions  Competition[]
+}
+
+model Competition {
+  id         Int          @id @default(autoincrement())
+  name       String
+  winPoints  Int
+  drawPoints Int
+  lossPoints Int
+  matches    Match[]
+  competitors Competitor[]  // Add this relation field
+  creatorId  String
+  creator    User          @relation(fields: [creatorId], references: [auth0Id])
+  sharedLink String        @default(uuid()) @unique
+  rounds      Round[] // Add this relation field
+}
+
+model Competitor {
+  id             Int       @id @default(autoincrement())
+  name           String
+  points         Int       @default(0)
+  competitionId  Int
+  competition    Competition @relation(fields: [competitionId], references: [id])
+  
+  homeMatches    Match[]   @relation("HomeCompetitorRelation")
+  awayMatches    Match[]   @relation("AwayCompetitorRelation")
+}
+
+
+
+model Match {
+  id               Int       @id @default(autoincrement())
+  homeCompetitorId Int
+  homeCompetitor   Competitor @relation("HomeCompetitorRelation", fields: [homeCompetitorId], references: [id])
+  awayCompetitorId Int
+  awayCompetitor   Competitor @relation("AwayCompetitorRelation", fields: [awayCompetitorId], references: [id])
+  homeScore        Int?
+  awayScore        Int?
+  roundId          Int
+  round            Round     @relation(fields: [roundId], references: [id])
+  competitionId    Int
+  competition      Competition @relation(fields: [competitionId], references: [id])
+}
+
+
+
+
+model Round {
+  id             Int       @id @default(autoincrement())
+  roundNumber    Int
+  competitionId  Int
+  competition    Competition @relation(fields: [competitionId], references: [id])
+  matches        Match[]
+}

@@ -1,0 +1,61 @@
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: rgb(28, 122, 5);
+}
+
+.competitionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(32, 134, 7, 0.758);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.competitions {
+    background-color: rgba(0, 8, 227, 0.496);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.competition {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid rgba(11, 0, 227, 0.764);
+}
+
+.competition:last-child {
+    border-bottom: none;
+}
+
+.competitionName {
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.936);
+}
+
+.buttonToCompetition {
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(11, 0, 227, 0.764);
+    color: white;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.buttonToCompetition:hover {
+    background-color: rgba(11, 0, 227, 0.964);
+}

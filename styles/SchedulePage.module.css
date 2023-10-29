@@ -1,0 +1,88 @@
+.container {
+    max-width: 800px; 
+    margin: 20px auto; 
+    font-family: 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: rgb(28, 122, 5);
+}
+
+.round {
+    background-color: rgba(0, 8, 227, 0.496);
+    border-radius: 5px;
+    padding: 5px; 
+    margin: 5px 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roundHeader {
+    color: rgba(0, 8, 227, 0.876);
+    background-color: rgba(32, 134, 7, 0.758);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 0; 
+    text-align: left;
+}
+
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(11, 0, 227, 0.764); 
+}
+
+.match:last-child {
+    border-bottom: none;
+}
+
+.competitors {
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.936);
+    margin-right: 15px;
+}
+
+.modal li {
+    list-style-type: none;
+}
+
+.modal ul {
+    padding: 0;
+    text-align: center;
+}
+
+.scoreInput {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.scoreInput input {
+    border: 1px solid rgba(11, 0, 227, 0.523);
+    border-radius: 3px;
+    padding: 5px;
+    max-width: 73.8px;
+}
+
+.updateButton {
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(11, 0, 227, 0.764);
+    color: white;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    margin-right: 10px; 
+}
+
+.updateButton:last-child {
+    margin-right: 0; 
+}
+
+.updateButton:hover {
+    background-color: rgba(11, 0, 227, 0.864); 
+}
