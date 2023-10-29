@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
-    "build": "next build" 
+    "build": "next build",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
